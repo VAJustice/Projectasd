@@ -1,0 +1,19 @@
+.row {
+    display: flex;
+    width: 65%;
+    margin-left: 5%;
+    margin-top: 20px;
+} .column {
+      flex: 50%;
+  } input {
+          width: 380px;
+          height: 46px;
+          border-color: rgba(43, 56, 68, 0.2);
+      } input:focus {
+          border-color: rgba(83, 130, 231, 1);
+          box-shadow:0 0 10px #407bd4;
+       } button {
+              margin-top: 20px;
+           }
+
+

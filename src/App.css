@@ -1,38 +1,177 @@
-.App {
-  text-align: center;
-}
+*{box-sizing:border-box;}
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
+/*Глобальные стили*/
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.header{
+  width: 90%;
+  display: flex;
+  height: 18%;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  margin: auto;
+}
+.button{
+  width: 230px;
+  height: 55px;
+  border:none;
+  border-radius: 7px;
+  display: flex;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  background-color: rgba(83, 130, 231, 1);
+}
+.button:hover{
+  box-shadow:0 0 10px #407bd4;
+}
+.button .buttonText{
+  color: rgba(255, 255, 255, 1);
+  font-size: 12pt;
+  margin-left: 7px;
+}
+.button img{
+  width: 22px;
+  height: 27px;
+}
+.namedMain{
+  width: 350px;
   display: flex;
   flex-direction: column;
+}
+.namedMain p {
+  margin-bottom: 5px;
+}
+.mainCreate{
+  margin-left: auto;
+  margin-top: 20px;
+}
+.namedMain .textFirst{
+  font-size: 32pt;
+  font-weight: bold;
+}
+.namedMain .textTwo{
+  font-size: 12pt;
+  color: rgba(43, 56, 68, 0.7);
+}
+hr{
+  width: 90%;
+}
+
+
+/*----------------*/
+
+
+body{
+
+}
+.center{
+  display: flex;
+}
+.navbar{
+  width: 17%;
+  height: 100%;
+  overflow-x: hidden;
+}
+.content{
+  width: 83%;
+  height: 980px;
+  background-color: #F8F8F8;
+}
+.logoNav{
+  width: 100%;
+  height: 138px;
+  display: flex;
   align-items: center;
+  align-content: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
-
-.App-link {
-  color: #61dafb;
+.logoContainer{
+  width: 100%;
+  height: 26px;
+  display: flex;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.logoJustice{
+  width: 150px;
+  height: 20px;
+  float: left;
+  font-size: 26pt;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  letter-spacing: 2px;
+  margin-right: 10px;
+}
+.logoCRM{
+  width: 50px;
+  height: 30px;
+  float: left;
+  display: flex;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  background-color: #5382E7;
+  border-radius: 10%;
+  color:white;
+  font-weight: bold;
+}
+.link{
+  color: rgba(43, 56, 68, 1);
+  text-decoration: none;
+  width: 100%;
+  height: 56px;
+  display: flex;
+  align-items: center;
+  align-content: center;
+  justify-content: left;
+  padding-left:45px;
+  transition: opacity 0.3s;
+  opacity: 0.5;
+  position: relative;
+}
+.link:after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(83, 130, 231, 0.1);
+  transition: .3s;
+  right: -100%;
+}
+.active-link:after {
+    right: 0;
+}
+.link .link-img {
+  margin-right: 10px;
+  filter: grayscale(1);
+}
+.active-link {
+  opacity: 1;
+  border-right:2px solid rgba(83, 130, 231, 1);
+}
+.active-link .link-img {
+  filter: grayscale(0);
+}
+.active-link .link-text{
+  color: #5382E7;
+}
+.panel{
+  width: 100%;
+  height: 710px;
+  color: #2B3844;
+}
+.textSwitch{
+  margin-left:10px;
+}
+.logOut{
+  opacity: 1;
+}
+.logOut .link-text{
+  color: #5382E7;
 }
