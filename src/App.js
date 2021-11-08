@@ -5,16 +5,35 @@ import {Sales} from './components/Sales/Sales';
 import Cabinet from "./components/Cabinet/Cabinet";
 import Main from "./components/Main/Main";
 import Error from "./components/error";
-import Login from "./components/login";
+import Login from "./components/Login/Login";
 import home from './assets/home.svg';
 import doc from './assets/doc.svg';
 import percent from './assets/percent.svg';
 import user from './assets/user.svg';
 import log from './assets/log.svg';
+import Modal from './components/Modal/Modal'
 
-import {BrowserRouter as Router, Switch, Route, Link, NavLink} from "react-router-dom";
 
-function App() {
+import React, {useState} from 'react';
+import {BrowserRouter as Router, Switch, Route, Link, NavLink, useHistory, Redirect} from "react-router-dom";
+
+
+function App({setBlackFlag}) {
+
+  const [modal, setModal] = useState({
+    modalMain:false,
+    modalProduct:false,
+    modalSales:false
+  })
+
+  // const [modal2,setModal2] = useState(false);
+  let history = useHistory();
+  function handleClick() {
+    history.push('/login');
+    localStorage.setItem('isUser', JSON.stringify(Boolean(0)));
+    setBlackFlag(false)
+  }
+
   return (
     <Router>
 
@@ -61,7 +80,7 @@ function App() {
           </div>
           <hr />
           <div>
-            <NavLink to="/login" className='link' activeClassName='logOut'>
+            <NavLink to="/login" onClick={handleClick} className='link' activeClassName='logOut'>
               <div className='link-img'><img src={log} alt="log"/></div>
               <div className='link-text'>
                 Login page
@@ -73,9 +92,9 @@ function App() {
         <div className='content'>
 
             <Switch>
-              <Route path="/main" component={Main} />
-              <Route path="/products" component={Products} />
-              <Route path="/sales" component={Sales} />
+              <Route path="/main"><Main setModal={setModal} /></Route>
+              <Route path="/products"><Products setModal={setModal} /></Route>
+              <Route path="/sales"><Sales setModal={setModal} /></Route>
               <Route path="/cabinet" component={Cabinet} />
               <Route component={Error} />
             </Switch>
@@ -83,6 +102,122 @@ function App() {
         </div>
       </div>
 
+
+      <Modal
+        title={'Creating a product'}
+        isOpened={modal.modalMain}
+        onModalClose={() => setModal({modalMain:false})}
+      >
+        <div className="row">
+          <div className="column">
+            <input placeholder='Store' />
+          </div>
+        </div>
+        <div className="row">
+          <div className="column">
+            <input placeholder='Price' />
+          </div>
+        </div>
+        <div className="row">
+          <div className="column">
+            <input placeholder='Product name' />
+          </div>
+        </div>
+        <div className="row">
+          <div className="column">
+            <input placeholder='Product Category' />
+          </div>
+        </div>
+        <div className="row">
+          <div className="column">
+            <input placeholder='Quantity of goods' />
+          </div>
+        </div>
+        <div className="row">
+          <div className="column">
+            <input placeholder='Weight / Volume of one item' />
+          </div>
+        </div>
+        <div className="row">
+          <div className="column">
+            <NavLink to="/app/main">
+              <button className='button'>
+                <span className='buttonText'>Add Product</span>
+              </button>
+            </NavLink>
+          </div>
+        </div>
+      </Modal>
+      <Modal
+        title={'Sell the product'}
+        isOpened={modal.modalProduct}
+        onModalClose={() => setModal({modalProduct:false})}
+      >
+        <div className="row">
+          <div className="column">
+            <input placeholder='Number of product' />
+          </div>
+        </div>
+        <div className="row">
+          <div className="column">
+            <input placeholder='Date of sale' />
+          </div>
+        </div>
+        <div className="row">
+          <div className="column">
+            <NavLink to="/app/main">
+              <button className='button'>
+                <span className='buttonText'>Add Product</span>
+              </button>
+            </NavLink>
+          </div>
+        </div>
+      </Modal>
+      <Modal
+        title={'Editing a product'}
+        isOpened={modal.modalSales}
+        onModalClose={() => setModal({modalSales:false})}
+      >
+        <div className="row">
+          <div className="column">
+            <input placeholder='Store' />
+          </div>
+        </div>
+        <div className="row">
+          <div className="column">
+            <input placeholder='Price' />
+          </div>
+        </div>
+        <div className="row">
+          <div className="column">
+            <input placeholder='Product name' />
+          </div>
+        </div>
+        <div className="row">
+          <div className="column">
+            <input placeholder='Product Category' />
+          </div>
+        </div>
+        <div className="row">
+          <div className="column">
+            <input placeholder='Quantity of goods' />
+          </div>
+        </div>
+        <div className="row">
+          <div className="column">
+            <input placeholder='Weight / Volume of one item' />
+          </div>
+        </div>
+        <div className="row">
+          <div className="column">
+            <NavLink to="/app/main">
+              <button className='button'>
+                <span className='buttonText'>Save changes</span>
+              </button>
+            </NavLink>
+          </div>
+        </div>
+      </Modal>
     </Router>
 
   );

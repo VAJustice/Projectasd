@@ -12,8 +12,10 @@
   justify-content: center;
   margin: auto;
 }
-.button{
+.content .button{
   width: 230px;
+}
+.button{
   height: 55px;
   border:none;
   border-radius: 7px;
@@ -58,6 +60,61 @@
 hr{
   width: 90%;
 }
+.MuiTableHead-root{
+  background-color: rgba(43, 56, 68, 1);
+}
+.MuiTableBody-root .MuiTableRow-root:nth-of-type(odd) {
+  background-color: #F8F8F8;
+}
+.MuiTableBody-root td{
+  border-bottom: none;
+  color: rgba(43, 56, 68, 1);
+}
+.MuiTableBody-root th{
+  border-bottom: none;
+  color: rgba(43, 56, 68, 1);
+}
+
+.row {
+  display: flex;
+  width: 65%;
+  margin-left: 5%;
+  margin-top: 20px;
+} .column {
+    flex: 50%;
+    padding-top: 15px;
+  } p {
+      color: rgba(53, 67, 82, 1);
+    } input {
+        width: 100%;
+        height: 46px;
+        border-color: rgba(43, 56, 68, 0.2);
+      } input:focus {
+          outline: none;
+          border-color: rgb(126, 163, 241);
+          box-shadow:0 0 10px #407bd4;
+        } button {
+            margin-top: 20px;
+          }
+input{
+  padding-left: 15px;
+}
+.loginImage{
+  width:52%;
+  text-align:center;
+  /*background-image: url(../../assets/login.png);*/
+}  img{
+     width: 100%;
+     height: 100%;
+   }
+a{
+  text-decoration: none;
+  color: rgba(83, 130, 231, 1);
+}
+a:hover{
+  text-shadow: #5D91EAFF 0 0 6px;
+}
+
 
 
 /*----------------*/
@@ -125,7 +182,7 @@ body{
   color: rgba(43, 56, 68, 1);
   text-decoration: none;
   width: 100%;
-  height: 56px;
+  height: 60px;
   display: flex;
   align-items: center;
   align-content: center;
@@ -154,6 +211,12 @@ body{
 .active-link {
   opacity: 1;
   border-right:2px solid rgba(83, 130, 231, 1);
+}
+.active-link:hover{
+  text-shadow: none;
+}
+.panel a:hover{
+  color: rgba(83, 130, 231, 1);
 }
 .active-link .link-img {
   filter: grayscale(0);

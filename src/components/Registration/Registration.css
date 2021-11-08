@@ -1,0 +1,33 @@
+.registrationContainer{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+}
+.registrationContent{
+      width: 50%;
+      margin: auto;
+}
+.registrationContent input{
+    width: 100%;
+}
+.registrationContent .button{
+    width: 100%;
+}
+.create p{
+    width: 415px;
+    margin: auto;
+}
+.create{
+    color: rgba(43, 56, 68, 1);
+    font-family: Inter;
+    font-size: 40pt;
+    font-weight: bold;
+}
+.margin{
+    margin-left: 15px;
+}
+.alreadyAcc p{
+    width: 52%;
+    margin: auto;
+    padding-top: 10px;
+}

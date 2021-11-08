@@ -1,8 +1,15 @@
 import './Main.css';
 import create from '../../assets/createNew.svg';
-import React from 'react';
+import React, {useState} from 'react';
+import Modal from '../Modal/Modal'
 
-function Main() {
+function Main(props) {
+
+    // const [modal, setModal] = useState({
+    //   modal1:false,
+    //   modal2:false
+    // })
+
   return (
     <React.Fragment>
 
@@ -12,7 +19,7 @@ function Main() {
         <span className='textTwo'>Welcome to CRM dashboard</span>
       </div>
       <div className='mainCreate'>
-          <button className='button'>
+          <button className='button' onClick={() => props.setModal({ modalMain:true})}>
             <img src={create} /><span className='buttonText'>Create a product</span>
           </button>
       </div>
@@ -23,7 +30,6 @@ function Main() {
           <div className=' item-b'></div>
           <div className=' item-c'></div>
       </div>
-
     </React.Fragment>
   );
 }

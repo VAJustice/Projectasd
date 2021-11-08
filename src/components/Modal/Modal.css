@@ -1,0 +1,58 @@
+.modal_wrapper {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(5px);
+}
+.modal_wrapper_open{
+    height: 100%;
+    display: flex;
+}
+.modal_wrapper_close{
+    height: 0;
+    display: none;
+}
+.modal_body{
+    width: 450px;
+    background: white;
+    margin-top: 15%;
+    padding: 20px;
+    border-radius: 5px;
+    max-height:70%;
+}
+.modal_body::-webkit-scrollbar {
+    width: 0;
+    background: transparent;
+}
+.modal_body{
+    -ms-overflow-style: none;
+
+}
+.modal_close{
+    height: 20px;
+    margin-top: 70px;
+    background-color: transparent;
+    border: none;
+}
+.modal_content{
+    margin: auto;
+    display: flex;
+}
+.modal_body h2{
+    text-align: center;
+    font-size: 24pt;
+    width: 100%;
+}
+.modal_body .row{
+    width: 80%;
+
+}
+.modal_body .row button{
+    width: 100%;
+    background-color: rgba(83, 130, 231, 1);
+}
+.modal_body .row input{
+    border-radius: 5px;
+    margin-top: 7px;
+}

@@ -1,0 +1,42 @@
+.loginContainer{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+} .loginContent{
+    width: 50%;
+    margin: auto;
+  } .row{
+    width: 50%;
+    margin: auto;
+      }
+.sign {
+    color: rgba(43, 56, 68, 1);
+    font-family: Inter;
+    font-size: 40pt;
+    font-weight: bold;
+}
+.sign p{
+   width: 170px;
+   margin: auto;
+
+}
+.loginContent .column .button{
+    width: 100%;
+}
+.button .buttonText{
+    margin-left: 0px;
+  }
+.forgotPass p{
+    width: 32%;
+    margin: auto;
+    padding-top: 10px;
+  }
+/*.forgotPass a{*/
+/*      color: rgba(83, 130, 231, 1);*/
+/*  }*/
+/*.forgotPass a:hover{*/
+/*          text-shadow: #5D91EAFF 0 0 6px;*/
+/*      }*/
+.loginContent .row input{
+    width: 100%;
+}

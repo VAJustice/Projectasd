@@ -1,10 +1,7 @@
-.contentProduct{
+.contentSales{
     width: 90%;
     margin: auto;
 }
-.contentProduct .MuiPaper-root{
+.contentSales .MuiPaper-root{
     box-shadow: none;
 }
-
-
-

@@ -2,11 +2,25 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
+import BlackFlag from "./blackFlag";
+import Login from './components/Login/Login';
+import Registration from './components/Registration/Registration';
 import reportWebVitals from './reportWebVitals';
+
+import {BrowserRouter as Router, Switch, Route, Link, NavLink, Redirect} from "react-router-dom";
+import Main from "./components/Main/Main";
+import Products from "./components/Product/Product";
+import {Sales} from "./components/Sales/Sales";
+import Cabinet from "./components/Cabinet/Cabinet";
+import Error from "./components/error";
+
+
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+
+  <BlackFlag />
+
   </React.StrictMode>,
   document.getElementById('root')
 );

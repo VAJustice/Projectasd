@@ -1,27 +1,23 @@
 
 .container .item-a {
     grid-area: salesScheduleDiagramm;
-    width: 550px;
-    height: 360px;
     background-color: grey;
 }
 .container .item-b {
     grid-area: salesOverviewDiagramm;
-    width: 810px;
-    height: 630px;
     background-color: grey;
 }
 .container .item-c {
     grid-area: salesTotalDiagramm;
-    width: 550px;
-    height: 250px;
     background-color: grey;
 }
 .container {
+    width: 89%;
+    margin: auto;
     /*height: 76%;*/
     display: grid;
-    grid-template-columns: auto;
-    grid-template-rows: auto;
+    grid-template-columns: 40% 60%;
+    grid-template-rows: 360px 250px;
     grid-template-areas:
     "salesScheduleDiagramm salesOverviewDiagramm"
     "salesTotalDiagramm salesOverviewDiagramm";
